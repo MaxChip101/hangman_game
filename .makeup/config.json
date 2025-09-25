@@ -1,0 +1,46 @@
+{
+	"project": {
+		"version": "0.0.1",
+		"name": "Hang Man Game",
+		"description": "A hangman game but with more stuff",
+		"license": "MIT"
+	},
+	"build": {
+		"profiles": {
+			"public": [
+				{
+					"name": "windows-build",
+					"type": "wildcard+map",
+					"rule-set": {
+						"wildcard-dir": "src/",
+						"wildcard-regex": "./*\\.cpp",
+						"wildcard-format": "src/*",
+						"cache": true,
+						"map-format": "bin/obj/*---o"
+					},
+					"template": "x86_64-w64-mingw32-g++ -Ilib/sdl/include -static -c {wildcard} -o {map}",
+					"next-profile": "link-windows-objects",
+					"condition": 0
+				}
+			],
+			"private": [
+				{
+					"name": "link-windows-objects",
+					"type": "wildcard",
+					"rule-set": {
+						"directory": "bin/obj/",
+						"regex": ".*\\.o",
+						"format": "bin/obj/*",
+						"cache": true
+					},
+					"template": "x86_64-w64-mingw32-g++ {wildcard} -lSDL3 -Llib/sdl/lib -mwindows -o bin/hangman.exe",
+					"next-profile": "",
+					"condition": 0
+				}
+			]
+		}
+	},
+	"makeup": {
+		"version": "0.0.1"
+	}
+}

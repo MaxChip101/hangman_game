@@ -1,0 +1,12 @@
+hangman game:
+
+allow the player to type in full words or just characters
+
+hangman but there is diffent gamemodes
+
+coin flipping
+
+add roguelike stats?:
+if so then {
+    what kind of stats?
+}

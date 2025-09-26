@@ -10,3 +10,31 @@ add roguelike stats?:
 if so then {
     what kind of stats?
 }
+
+falling letters?
+
+quick time events
+
+minigames
+
+hangman but you are also the hangman (play against bot)
+
+
+
+falling letters with roguelike stats
+
+time limit that goes down and you lose if it reaches 0
+there is a conveyer of letters that scrolls
+you need to press space when the key is in the square to add the letter to a stack
+you press enter to put the stack into the main line
+the letter stack must be a valid sequence in the line to be added
+the conveyer costs money to run $1 per second
+
+
+to get money, the player must press the right arrow to go to the money making area
+the player presses the number that shows up that are green to earn 10 cents, if the player presses a red key, they lose 20 cents
+if the player hits a yellow key, they lose 20 cents too but after a second they turn green
+
+to switch back to the letter selector the player has to press left to switch back
+
+add events that can change how the game works like: invert the conveyer rotation, change background color, recession (earn no money), money gallore (earn more money), minimize game

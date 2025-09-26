@@ -13,7 +13,7 @@
 					"type": "wildcard+map",
 					"rule-set": {
 						"wildcard-dir": "src/",
-						"wildcard-regex": "./*\\.cpp",
+						"wildcard-regex": "./*n\\.cpp",
 						"wildcard-format": "src/*",
 						"cache": true,
 						"map-format": "bin/obj/*---o"
@@ -33,7 +33,7 @@
 						"format": "bin/obj/*",
 						"cache": true
 					},
-					"template": "x86_64-w64-mingw32-g++ {wildcard} -lSDL3 -Llib/sdl/lib -mwindows -o bin/hangman.exe",
+					"template": "x86_64-w64-mingw32-g++ {wildcard} -Llib/sdl/lib -lSDL3 -lstdc++ -o bin/hangman.exe",
 					"next-profile": "",
 					"condition": 0
 				}

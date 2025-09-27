@@ -13,13 +13,27 @@
 					"type": "wildcard+map",
 					"rule-set": {
 						"wildcard-dir": "src/",
-						"wildcard-regex": "./*n\\.cpp",
+						"wildcard-regex": "./*\\.cpp",
 						"wildcard-format": "src/*",
 						"cache": true,
 						"map-format": "bin/obj/*---o"
 					},
 					"template": "x86_64-w64-mingw32-g++ -Ilib/sdl/include -static -c {wildcard} -o {map}",
 					"next-profile": "link-windows-objects",
+					"condition": 0
+				},
+				{
+					"name": "windows-release",
+					"type": "wildcard+map",
+					"rule-set": {
+						"wildcard-dir": "src/",
+						"wildcard-regex": "./*\\.cpp",
+						"wildcard-format": "src/*",
+						"cache": true,
+						"map-format": "bin/obj/*---o"
+					},
+					"template": "x86_64-w64-mingw32-g++ -Ilib/sdl/include -static -c {wildcard} -o {map}",
+					"next-profile": "link-windows-objects-release",
 					"condition": 0
 				}
 			],
@@ -34,6 +48,19 @@
 						"cache": true
 					},
 					"template": "x86_64-w64-mingw32-g++ {wildcard} -Llib/sdl/lib -lSDL3 -lstdc++ -o bin/hangman.exe",
+					"next-profile": "",
+					"condition": 0
+				},
+				{
+					"name": "link-windows-objects-release",
+					"type": "wildcard",
+					"rule-set": {
+						"directory": "bin/obj/",
+						"regex": ".*\\.o",
+						"format": "bin/obj/*",
+						"cache": true
+					},
+					"template": "x86_64-w64-mingw32-g++ {wildcard} -Llib/sdl/lib -lSDL3 -lstdc++ -mwindows -o bin/hangman.exe",
 					"next-profile": "",
 					"condition": 0
 				}

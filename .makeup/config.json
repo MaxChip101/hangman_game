@@ -101,7 +101,7 @@
 						"format": "bin/obj/windows/*",
 						"cache": true
 					},
-					"template": "x86_64-w64-mingw32-g++ {wildcard} -Llib/sdl/lib -lSDL3 -lstdc++ -o bin/windows/hangman.exe",
+					"template": "x86_64-w64-mingw32-g++ {wildcard} -Llib/sdl/lib -lSDL3 -static-libgcc -static-libstdc++ -o bin/windows/hangman.exe",
 					"next-profile": "",
 					"condition": 0
 				},
@@ -114,7 +114,7 @@
 						"format": "bin/obj/windows/release/*",
 						"cache": true
 					},
-					"template": "x86_64-w64-mingw32-g++ {wildcard} -Llib/sdl/lib -lSDL3 -lstdc++ -mwindows -o bin/windows/release/hangman.exe",
+					"template": "x86_64-w64-mingw32-g++ {wildcard} -Llib/sdl/lib -lSDL3 -static-libgcc -static-libstdc++ -mwindows -o bin/windows/release/hangman.exe",
 					"next-profile": "",
 					"condition": 0
 				}

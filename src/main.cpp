@@ -68,9 +68,6 @@ SDL_AppResult SDL_AppEvent(void *appstate, SDL_Event *event) {
         case SDL_SCANCODE_RETURN:
           SubmitBuffer();
           break;
-        case SDL_SCANCODE_0:
-          MinerInput(0);
-          break;
         case SDL_SCANCODE_1:
           MinerInput(1);
           break;

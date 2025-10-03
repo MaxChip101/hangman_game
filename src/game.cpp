@@ -166,11 +166,6 @@ void MinerInput(int number) {
     return;
   }
 
-  if (number == 0) {
-    NewMinerSet();
-    return;
-  }
-
   switch(miner[number - 1]) {
     case NumberSafe:
     AddMoney(pay);

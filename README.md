@@ -10,6 +10,12 @@ HangMan Game is a game that is similar to the classic game of hangman but with a
 
 ---
 
+#### Usage
+
+Hangman Game requires a words.txt file in the working directory for Hangman Game to launch. The words.txt file must have words that are seperated by new lines for Hangman Game to read properly
+
+---
+
 #### Features
 
 HangMan Game has multiple features that make the game more difficult. The first feature is the secret, the secret is the word that the player must find:
